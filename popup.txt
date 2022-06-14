@@ -1,0 +1,44 @@
+<ng-template #view>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">View product</h4>
+        <button type="button" class="close pull-right" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="modal-body" style="width: 500px;">
+        <div class="form-group">
+            <label for="id">Name</label>
+            <input type="text" [disabled]="true" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="image">Quantity</label>
+            <input type="text" [disabled]="true" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="name">Price</label>
+            <input type="text" [disabled]="true" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="name">Available</label>
+            <input type="text" [disabled]="true" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="name">Type</label>
+            <input type="text" [disabled]="true" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Image</label>
+            <div class="row">
+                <div *ngFor="let image of images" class="col-4">
+                    <img src="{{image}}" style="text-align:center; width: 150px; height: 200px; object-fit: cover">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default">Close</button>
+    </div>
+</ng-template>
+
